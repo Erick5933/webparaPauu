@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti, Paula 💜</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="scrip.js"></script>
+    <script>
+        function showNextPhrase(buttonId, nextSectionId, nextButtonId) {
+            document.getElementById(buttonId).style.display = 'none';
+            document.getElementById(nextSectionId).style.display = 'block';
+            if (nextButtonId) {
+                document.getElementById(nextButtonId).style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Para Ti, Paula 💜🌻</h1>
+            <p class="subtitle">Un recorrido por nuestros momentos más especiales 🌟</p>
+        </header>
+        <section class="full-screen-image">
+            <h2>Mi Niña Linda 🌸</h2>
+        </section>
+
+        <!-- Nosotros (al comienzo) -->
+        <section class="album">
+            <h2>Nosotros 💑</h2>
+            <div class="photo">
+                <img src="nosotros1.JPG" alt="Nosotros juntos">
+                <p>💞 Tú y yo, construyendo nuestro mundo 💞</p>
+            </div>
+            <div class="photo">
+                <img src="nosotros2.JPG" alt="Momentos de felicidad juntos">
+                <p>🎉 Felicidad es cualquier momento contigo 🎉</p>
+            </div>
+            <div class="photo">
+                <img src="nosotros3.JPG" alt="Otro momento juntos">
+                <p>🥰 Mi persona favorita 🥰</p>
+            </div>
+            <div class="photo">
+                <img src="nosotros4.JPG" alt="Nosotros mirando juntos">
+                <p>🤗 Abrazos que son mi lugar favorito en el mundo 🌍</p>
+            </div>
+            <div class="photo">
+                <img src="nosotros5.JPG" alt="Cercanía y amor">
+                <p>👀 Miradas que hablan más que mil palabras 💬</p>
+            </div>
+        </section>
+
+        <!-- Fin de Año -->
+        <section class="album">
+            <h2>🌻 Momentos Especiales 🌻</h2>
+            <div class="photo">
+                <img src="findeanio.JPG" alt="La primera persona que vi en el año">
+                <p>🎆 Empezar el año contigo es mi mejor suerte 🍀</p>
+            </div>
+            <div class="photo">
+                <img src="chorde1.JPG" alt="Recuerdo en Chorde">
+                <p>🚶‍♀️🚶‍♂️ Nuestra Primera foto y los paseos por Chorde ❤️</p>
+            </div>
+        </section>
+
+        <!-- Manillas y Vino -->
+        <section class="album">
+            <h2>Cosa de Nosotros 🍷</h2>
+            <div class="photo">
+                <img src="manillas1.JPG" alt="Nuestras manillas juntas">
+                <p>💍 Estas manillas tienen todo mi amor para ti 💕</p>
+            </div>
+            <div class="photo">
+                <img src="unvinito1.JPG" alt="Más manillas juntas">
+                <p>🍷 Un brindis por nosotros y por lo que construimos juntos 🥂</p>
+            </div>
+            <div class="photo">
+                <img src="chorde2.JPG" alt="Más manillas juntas">
+                <p>✨ Algo que solo nosotros entendemos ✨</p>
+            </div>
+        </section>
+
+        <!-- Cuenca (al final) -->
+        <section class="album">
+            <h2>Momentos en Cuenca 🌄</h2>
+            <div class="photo">
+                <img src="cuenca1.JPG" alt="Explorando Cuenca">
+                <p>💕 PyE 💕 Nuestro lugar especial 🏞️</p>
+            </div>
+            <div class="photo">
+                <img src="cuenca2.JPG" alt="Vista hermosa en Cuenca">
+                <p>🌇 Las vistas hermosas solo mejoran contigo a mi lado 💕</p>
+            </div>
+            <div class="photo">
+                <img src="cuenca3.JPG" alt="Cuenca de noche">
+                <p>🌌 Cuenca de noche, como nuestras estrellas 🌟</p>
+            </div>
+            <div class="photo">
+                <img src="cuenca4.JPG" alt="Un girasol y tú">
+                <p>🌻 El girasol más bonito para mi sol 💛</p>
+            </div>
+            <div class="photo">
+                <img src="cuenca7.JPG" alt="Nosotros en Cuenca">
+                <p>🗺️ Cada lugar contigo es inolvidable 📍</p>
+            </div>
+            <div class="photo">
+                <img src="cuenca6.JPG" alt="Risas en Cuenca">
+                <p>😄 Momentos llenos de risas, amor y complicidad ❤️</p>
+            </div>
+        </section>
+
+        <section class="interactive">
+            <h2>💌 Un Mensaje para Ti 💌</h2>
+            <div class="button-container">
+                <button id="button1" onclick="handleButtonClick('button1', 'phrase1', 'button2')">Haz clic para leer algo especial 🌟</button>
+                <p id="phrase1" style="display: none;">Eres mi razón favorita para sonreír. 🌸</p>
+        
+                <button id="button2" style="display: none;" onclick="handleButtonClick('button2', 'phrase2', 'button3')">Quiero decirte algo más... 💕</button>
+                <p id="phrase2" style="display: none;">Cuando estoy contigo, todo es perfecto. 🌻</p>
+        
+                <button id="button3" style="display: none;" onclick="handleButtonClick('button3', 'phrase3', null)">Última... 🌻</button>
+                <p id="phrase3" style="display: none;">Siempre serás mi persona favorita, TE AMO PAULA. 🌟</p>
+            </div>
+        </section>
+        <section class="interactive">
+            <h2>🎶 Canciones para Ti 🎶</h2>
+            <p>Estas canciones me recuerdan a ti y a los momentos que hemos compartido. 💜</p>
+            <a href="https://open.spotify.com/playlist/3n4F6SL9ZWmD0pCScSVcBI?si=05c71a071a0e4a89" target="_blank">
+                <button class="playlist-button">Escucha nuestra playlist 💕</button>
+            </a>
+        </section>
+        
+        <footer>
+            <p>Con amor, siempre para ti. De la persona que más te quiere: Erick ❤️</p>
+        </footer>
+    </div>
+</body>
+</html>
